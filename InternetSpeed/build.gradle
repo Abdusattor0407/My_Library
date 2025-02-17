@@ -35,7 +35,6 @@ afterEvaluate {
         publications {
             replace(MavenPublication){
                 from components.release
-
                 groupId = 'uz.mobilDev.InternetSpeed'
                 artifactId = 'nternet-speed'
                 version = '1.0.0'
