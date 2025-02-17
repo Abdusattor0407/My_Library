@@ -32,15 +32,16 @@ android {
 afterEvaluate {
     publishing {
         publications {
-            replace(MavenPublication){
-                from(components["release"])
-                groupId = 'uz.mobilDev.InternetSpeed'
-                artifactId = 'nternet-speed'
+            create("release", MavenPublication) {
+                from components.release
+                groupId = 'uz.mobildev.internetspeed' // Katta harf yo‘q!
+                artifactId = 'internet-speed'        // Harf xatosi to‘g‘rilandi!
                 version = '1.0.0'
             }
         }
     }
 }
+
 dependencies {
 
     implementation libs.androidx.core.ktx
